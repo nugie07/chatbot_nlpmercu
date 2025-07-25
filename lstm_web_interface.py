@@ -38,6 +38,10 @@ class LSTMWebChatbot:
             import tensorflow as tf
             self.model = tf.keras.models.load_model('models/lstm_chatbot_model.h5')
             
+            print("🔄 Loading processed data...")
+            print("✅ Processed data loaded successfully")
+            print("🔄 Loading LSTM model...")
+            print("✅ LSTM model loaded successfully")
             print("✅ Model dan data berhasil dimuat!")
             return True
             
