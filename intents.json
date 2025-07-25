@@ -1,0 +1,194 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Halo",
+        "Hai",
+        "Selamat pagi",
+        "Selamat siang",
+        "Selamat sore",
+        "Selamat malam",
+        "Halo, ada yang bisa saya bantu?",
+        "Selamat datang di layanan kesehatan kami",
+        "Hai, bagaimana kabar Anda?",
+        "Halo, saya siap membantu dengan masalah kesehatan Anda"
+      ],
+      "responses": [
+        "Halo! Selamat datang di layanan kesehatan kami. Saya siap membantu Anda dengan diagnosis penyakit. Boleh saya ketahui nama Anda?",
+        "Hai! Terima kasih telah menghubungi layanan kesehatan kami. Saya akan membantu mendiagnosis gejala Anda. Bisa tolong berikan nama Anda?",
+        "Selamat datang! Saya adalah asisten kesehatan AI yang siap membantu Anda. Mari kita mulai dengan biodata Anda. Siapa nama Anda?"
+      ]
+    },
+    {
+      "tag": "biodata",
+      "patterns": [
+        "Nama saya",
+        "Saya",
+        "Nama lengkap",
+        "Usia",
+        "Umur",
+        "Jenis kelamin",
+        "Laki-laki",
+        "Perempuan",
+        "Nama saya {name}",
+        "Saya {name}",
+        "Umur {age} tahun",
+        "Usia {age}",
+        "Jenis kelamin {gender}"
+      ],
+      "responses": [
+        "Baik {name}, bisa tolong berikan usia Anda?",
+        "Terima kasih atas informasinya {name}. Berapa tahun usia Anda?",
+        "Baik {name}, sekarang saya perlu tahu usia Anda untuk diagnosis yang lebih akurat."
+      ]
+    },
+    {
+      "tag": "symptoms",
+      "patterns": [
+        "Saya mengalami",
+        "Saya sakit",
+        "Saya merasa",
+        "Gejala",
+        "Keluhan",
+        "Demam",
+        "Batuk",
+        "Pilek",
+        "Sakit kepala",
+        "Pusing",
+        "Nyeri",
+        "Mual",
+        "Muntah",
+        "Sesak napas",
+        "Lelah",
+        "Nyeri dada",
+        "Sakit perut",
+        "Nyeri sendi",
+        "Menggigil",
+        "Batuk berdahak"
+      ],
+      "responses": [
+        "Saya mengerti gejala Anda. Berdasarkan gejala tersebut, kemungkinan diagnosis adalah {diagnosis}. Apakah ada gejala lain?",
+        "Terima kasih atas penjelasannya. Gejala yang Anda sebutkan mengarah ke {diagnosis}. Sudah berapa lama gejala ini muncul?",
+        "Saya mencatat gejala Anda. Kemungkinan besar Anda mengalami {diagnosis}. Apakah ada riwayat penyakit sebelumnya?"
+      ]
+    },
+    {
+      "tag": "medical_history",
+      "patterns": [
+        "Riwayat",
+        "Sebelumnya",
+        "Dulu",
+        "Pernah",
+        "Riwayat penyakit",
+        "Penyakit sebelumnya",
+        "Kondisi medis",
+        "Alergi",
+        "Hipertensi",
+        "Diabetes",
+        "Jantung",
+        "Asma",
+        "Tidak ada riwayat",
+        "Tidak ada"
+      ],
+      "responses": [
+        "Baik, saya sudah mencatat riwayat medis Anda. Sekarang, bagaimana dengan gejala yang Anda alami?",
+        "Terima kasih atas informasinya. Sekarang, bisakah Anda jelaskan gejala yang sedang Anda alami?",
+        "Baik, saya mengerti riwayat medis Anda. Sekarang, bisa tolong ceritakan keluhan kesehatan Anda?"
+      ]
+    },
+    {
+      "tag": "medication",
+      "patterns": [
+        "Obat",
+        "Minum",
+        "Konsumsi",
+        "Sedang minum",
+        "Obat yang dikonsumsi",
+        "Paracetamol",
+        "Antibiotik",
+        "Vitamin",
+        "Suplemen",
+        "Tidak minum obat",
+        "Tidak ada obat"
+      ],
+      "responses": [
+        "Baik, saya sudah mencatat obat Anda. Sekarang, bagaimana dengan gejala yang Anda alami?",
+        "Terima kasih atas informasinya. Sekarang, bisakah Anda jelaskan gejala yang sedang Anda alami?",
+        "Baik, saya mengerti obat yang Anda konsumsi. Sekarang, bisa tolong ceritakan keluhan kesehatan Anda?"
+      ]
+    },
+    {
+      "tag": "diagnosis",
+      "patterns": [
+        "Diagnosis",
+        "Penyakit",
+        "Kemungkinan",
+        "Apa penyakit saya",
+        "Sakit apa",
+        "Kondisi saya",
+        "Hasil diagnosis",
+        "Kesimpulan"
+      ],
+      "responses": [
+        "Berdasarkan gejala dan informasi yang Anda berikan, kemungkinan diagnosis adalah {diagnosis}. Saya sarankan untuk berkonsultasi dengan dokter untuk pemeriksaan lebih lanjut. Terima kasih telah menggunakan layanan kami!",
+        "Setelah menganalisis gejala Anda, kemungkinan Anda mengalami {diagnosis}. Untuk diagnosis yang lebih akurat, silakan berkonsultasi dengan dokter. Semoga lekas sembuh!",
+        "Diagnosis sementara berdasarkan gejala Anda adalah {diagnosis}. Namun, tetap disarankan untuk pemeriksaan medis langsung. Terima kasih telah menggunakan layanan kesehatan kami!"
+      ]
+    },
+    {
+      "tag": "negative_response",
+      "patterns": [
+        "Tidak",
+        "Tidak ada",
+        "No",
+        "None",
+        "Kosong",
+        "Tidak ada gejala lain",
+        "Tidak ada riwayat",
+        "Tidak minum obat"
+      ],
+      "responses": [
+        "Baik, saya mengerti. Sekarang, bisakah Anda jelaskan gejala yang sedang Anda alami?",
+        "Terima kasih atas informasinya. Bisa tolong ceritakan keluhan kesehatan Anda?",
+        "Baik, sekarang saya perlu tahu gejala apa yang Anda rasakan saat ini?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Terima kasih",
+        "Selamat tinggal",
+        "Sampai jumpa",
+        "Bye",
+        "Goodbye",
+        "Selesai",
+        "Cukup",
+        "Tidak ada lagi"
+      ],
+      "responses": [
+        "Terima kasih telah menggunakan layanan kesehatan kami. Semoga lekas sembuh dan jaga kesehatan selalu!",
+        "Selamat tinggal! Jangan lupa untuk berkonsultasi dengan dokter jika gejala memburuk. Semoga sehat selalu!",
+        "Terima kasih atas kepercayaan Anda. Semoga informasi yang diberikan bermanfaat. Jaga kesehatan!"
+      ]
+    },
+    {
+      "tag": "general",
+      "patterns": [
+        "Apa kabar",
+        "Bagaimana",
+        "Bisa bantu",
+        "Tolong",
+        "Mohon",
+        "Saya tidak mengerti",
+        "Bisa dijelaskan",
+        "Apa maksudnya"
+      ],
+      "responses": [
+        "Maaf, saya tidak sepenuhnya memahami maksud Anda. Bisa tolong jelaskan lebih detail?",
+        "Mohon maaf, bisa tolong dijelaskan lebih lanjut tentang keluhan Anda?",
+        "Saya ingin memastikan saya memahami dengan benar. Bisa tolong ulangi atau jelaskan lebih detail?"
+      ]
+    }
+  ]
+} 

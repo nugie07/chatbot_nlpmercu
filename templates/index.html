@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Chatbot LSTM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <h1>Medical Chatbot LSTM</h1>
+            </div>
+            <p class="subtitle">Asisten Kesehatan Berbasis AI</p>
+        </header>
+
+        <div class="main-content">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2><i class="fas fa-comments"></i> Konsultasi Kesehatan</h2>
+                    <button id="resetBtn" class="reset-btn">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <i class="fas fa-robot"></i>
+                            <p>Halo! Selamat datang di layanan kesehatan kami. Saya adalah asisten kesehatan yang siap membantu Anda dengan diagnosis penyakit berdasarkan dataset medis. Boleh saya ketahui nama Anda?</p>
+                        </div>
+                        <div class="message-time" id="currentTime"></div>
+                    </div>
+                </div>
+
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Ketik pesan Anda di sini..." maxlength="500">
+                    <button id="sendBtn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="patient-info">
+                    <h3><i class="fas fa-user"></i> Data Pasien</h3>
+                    <div class="info-item">
+                        <label>Nama:</label>
+                        <span id="patientName">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Usia:</label>
+                        <span id="patientAge">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Jenis Kelamin:</label>
+                        <span id="patientGender">-</span>
+                    </div>
+                </div>
+
+                <div class="symptoms-info">
+                    <h3><i class="fas fa-stethoscope"></i> Gejala</h3>
+                    <div id="symptomsList" class="symptoms-list">
+                        <p class="no-symptoms">Belum ada gejala yang dilaporkan</p>
+                    </div>
+                </div>
+
+                <div class="diagnosis-info">
+                    <h3><i class="fas fa-clipboard-list"></i> Diagnosis</h3>
+                    <div id="diagnosisResult" class="diagnosis-result">
+                        <p class="no-diagnosis">Belum ada diagnosis</p>
+                    </div>
+                </div>
+
+                <div class="model-info">
+                    <h3><i class="fas fa-brain"></i> Model Info</h3>
+                    <div class="info-item">
+                        <label>Intent:</label>
+                        <span id="currentIntent">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Confidence:</label>
+                        <span id="confidenceScore">-</span>
+                    </div>
+                    <div class="info-item">
+                        <label>State:</label>
+                        <span id="currentState">greeting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Medical Chatbot LSTM. Dibuat dengan <i class="fas fa-heart"></i> untuk layanan kesehatan yang lebih baik.</p>
+            <p class="disclaimer">
+                <i class="fas fa-exclamation-triangle"></i> 
+                Disclaimer: Ini hanya diagnosis sementara. Konsultasikan dengan dokter untuk diagnosis yang akurat.
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html> 
